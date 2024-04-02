@@ -4,48 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>calulator</title>
+    <link rel="stylesheet" href="mine.css">
+    <title>Document</title>
 </head>
 <body>
-    <h1>CALCULATOR</h1>
     <div class="container">
-        <form name="forms">
-            <div class="calc">
-                <input type="text" id="answer" name="screen"> <br>
-                <input type="button" value="AC" onclick="forms.screen.value=''" id="gray">
-                <input type="button" value="^" onclick="forms.screen.value+='^'" id="gray">
-                <input type="button" value="%" onclick="forms.screen.value+='%'" id="gray">
-                <input type="button" value="&divide;" onclick="forms.screen.value+='/'" id="orange"><br>
-                
-
-                <input type="button" value="7" onclick="forms.screen.value+='7'">
-                <input type="button" value="8" onclick="forms.screen.value+='8'">
-                <input type="button" value="9" onclick="forms.screen.value+='9'">
-                <input type="button" value="&times;" onclick="forms.screen.value+='*'" id="orange"><br>
-                
-
-                <input type="button" value="4" onclick="forms.screen.value+='4'">
-                <input type="button" value="5" onclick="forms.screen.value+='5'">
-                <input type="button" value="6" onclick="forms.screen.value+='6'">
-                <input type="button" value="-" onclick="forms.screen.value+='-'" id="orange"><br>
-
-                <input type="button" value="1" onclick="forms.screen.value+='1'">
-                <input type="button" value="2" onclick="forms.screen.value+='2'">
-                <input type="button" value="3" onclick="forms.screen.value+='3'">
-                <input type="button" value="+" onclick="forms.screen.value+='+'" id="orange"><br>
-                
-
-                <input type="button" value="0" onclick="forms.screen.value+='0'">
-                <input type="button" value="00" onclick="forms.screen.value+='00'">
-                <input type="button" value="." onclick="forms.screen.value+='.'">
-                <input type="button" value="=" onclick="forms.screen.value= eval(forms.screen.value)" id="orange">
-                
-                
+        <div class="calculator mode">
+            <div class="switch next">
+                <div class="icon"></div>
             </div>
-            <div class="bar"></div>
-        </form>
-
+            <div id="display"></div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator" id="clear">C</button></td>
+                        <td><button class="btn-operator" id="/">&divide;</button></td>
+                        <td><button class="btn-operator" id="*">&times;</button></td>
+                        <td><button class="btn-operator" id="backspace">&larr;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="7">7</button></td>
+                        <td><button class="btn-number" id="8">8</button></td>
+                        <td><button class="btn-number" id="9">9</button></td>
+                        <td><button class="btn-operator" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="4">4</button></td>
+                        <td><button class="btn-number" id="5">5</button></td>
+                        <td><button class="btn-number" id="6">6</button></td>
+                        <td><button class="btn-operator" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="1">1</button></td>
+                        <td><button class="btn-number" id="2">2</button></td>
+                        <td><button class="btn-number" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" id="(">(</button></td>
+                        <td><button class="btn-number" id="0">0</button></td>
+                        <td><button class="btn-operator" id=")">)</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
+    <script src="./mine.js"></script>
+    
 </body>
 </html>
